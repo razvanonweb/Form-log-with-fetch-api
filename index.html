@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="form">
+        <form action="#">
+        <span style="display: none;" id="error"></span>
+        <label for="email">Email: </label>
+        <input type="email" placeholder="Email" id="email" required>
+        <label for="password">Password:</label>
+        <input type="password" placeholder="Password" id="password" required>
+        <input type="submit" value="Log In" id="logIn" required>
+        </form>
+    </div>
+
+    <div id="content" style="display: none;">
+        <div class="table">
+            <table>
+                <tr>
+                    <td><h1>Name:</h1></td>
+                    <td><h1>Gender:</h1></td>
+                    <td><h1>Age:</h1></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="loading">
+        <h1 class="text-shadow">Loading</h1>
+        <span class="dots">.</span>
+        <span class="dots">.</span>
+        <span class="dots">.</span>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

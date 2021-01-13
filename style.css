@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    /* font-style: italic; */
+}
+
+input:focus,
+input:active {
+    outline: none;
+    /* firefox */
+    box-shadow: unset;
+    /* webkit */
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+form {
+    /* border: 3px solid #1d3557; */
+    border-radius: 15px;
+    margin: auto auto;
+    padding: 30px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0px 4px 1px rgba(0, 0, 0, 0.6);
+    width: 500px;
+}
+input {
+    border: none;
+}
+input[type="email"] {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+    padding: 10px;
+    letter-spacing: 2px;
+    width: 100%;
+    /* background-color: #f2f2f2; */
+}
+input[type="password"] {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+    padding: 10px;
+    letter-spacing: 2px;
+    width: 100%;
+    /* background-color: #f2f2f2; */
+}
+input[type="submit"] {
+    display: block;
+    border: 2px solid #e63946;
+    padding: 7px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.35s ease;
+    letter-spacing: 1px;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-color: #e63946;
+    color: #ffffff;
+}
+label {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#error {
+    padding: 10px;
+    /* border: 2px solid black; */
+    text-align: center;
+    background-color: #e63946;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+#error::after {
+    content: "!";
+    background-color: #edf2f4;
+    color: #e63946;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+#content {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 100vh;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table table tr{
+    display: flex;
+    /* border: 1px solid black; */
+    width: 700px;
+}
+
+td {
+    width: 100%;
+    font-weight: 600;
+    margin-left: 5px;
+    /* font-size: 20px; */
+}
+td p {
+    border: 2px solid #e63946;
+    padding: 5px;
+}
+
+/* loading effect */
+
+#loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #e5e5e5;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+h1.text-shadow{
+    text-shadow: 1px 2px #43aa8b;
+    font-size: 60px;
+}
+span.dots {
+    font-size: 130px;
+    margin-top: -40px;
+    color: #43aa8b;
+    /* opacity: 0; */
+    transition: opacity 0.6s;
+    animation: infinite 2s effect;
+}
+
+@keyframes effect {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#loading span.dots:first-child {
+    animation-delay: 0ms;
+}
+#loading span.dots:nth-child(2) {
+    animation-delay: 600ms;
+}
+#loading span.dots:nth-child(3) {
+    animation-delay: 1200ms;
+}
